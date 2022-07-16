@@ -1,12 +1,3 @@
-/**
- * Practice: Making methods
- *
- * - Create a method for each object property.
- * - The method receives a value to match the property to be changed.
- * - Create a simple function to replace the current property value with the received value.
- * - Test the method by sending new values and checking the properties in the console.
- */
-
 const backpack = {
   name: "Everyday Backpack",
   volume: 30,
@@ -16,6 +7,10 @@ const backpack = {
     left: 26,
     right: 26,
   },
+  PocketDepth: {
+    left: 100,
+    right: 100,
+  },
   toggleLid: function (lidStatus) {
     this.lidOpen = lidStatus;
   },
@@ -23,4 +18,14 @@ const backpack = {
     this.strapLength.left = lengthLeft;
     this.strapLength.right = lengthRight;
   },
+  newPocketDepth: function (PocketRight, PocketLeft) {
+    this.PocketDepth.left = PocketLeft;
+    this.PocketDepth.right = PocketRight;
+  },
 };
+
+console.log("pocketDepth", backpack.PocketDepth.left);
+
+backpack.newPocketDepth(200, 300);
+
+console.log("pocketdepthnew", backpack.PocketDepth.left);
