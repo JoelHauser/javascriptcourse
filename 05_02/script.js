@@ -22,7 +22,7 @@ const main = document.querySelector(".maincontent");
 
 const content = `
   <article class="backpack" id="everyday">
-    <figure class="backpack__image">
+    <figure class="backpack__image id="image">
       <img src=${everydayPack.image} alt="" />
     </figure>
     <h1 class="backpack__name">${everydayPack.name}</h1>
