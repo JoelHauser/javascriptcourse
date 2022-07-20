@@ -67,3 +67,15 @@ navList.innerHTML = navContent;
 mainNav.append(navList);
 
 document.querySelector(".siteheader").append(mainNav);
+
+const footerContent = `
+<p>look at me dad!</p>
+`;
+
+const mainFooter = document.createElement("footer");
+mainFooter.classList.add("unordered");
+const footer = document.createElement("footer");
+footer.innerHTML = footerContent;
+mainFooter.append(footer);
+
+document.querySelector(".sitefooter").append(mainFooter);
