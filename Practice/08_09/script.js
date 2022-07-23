@@ -57,3 +57,9 @@ const content = `
       }</span></li>
     </ul>  
 `;
+
+function greeting(name) {
+  alert("hella " + name);
+}
+var personsName = "Joel";
+greeting(personsName);
