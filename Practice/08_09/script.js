@@ -58,8 +58,22 @@ const content = `
     </ul>  
 `;
 
-function greeting(name) {
-  alert("hella " + name);
-}
-var personsName = "Joel";
-greeting(personsName);
+const addFigure = (dataObj) => {
+  let newFigure = document.createElement("figure");
+  let newImg = document.createElement("img");
+  newImg.setAttribute("src", dataObj.image);
+  newImg.setAttribute("alt", "");
+  let newDesc = document.createElement("figcaption");
+  newDesc.innerText = dataObj.description;
+  newFigure.append(newImg, newDesc);
+  return newFigure;
+};
+
+const createArticle = (frogpack) => {
+  let newArticle = document.createElement("atricle");
+  newArticle.innerHTML = content;
+  newArticle.prepend(addFigure(frogpack));
+  return newArticle;
+};
+
+document.querySelector("main").append(createArticle(frogpack));
